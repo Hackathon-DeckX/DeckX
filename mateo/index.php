@@ -72,25 +72,35 @@ display_data($data);
 <body>
     <img src="<?php echo ($data[0]['img_path']); ?>" alt="logo">
 
-    <div class="mydiv draggables" style="top: 23; left: 587;">
-        <div class="mydivheader">Click here to move</div>
-        <p>Move</p>
-        <p>this</p>
-        <p>DIV</p>
-    </div>
+    <div class="page">
 
-    <div class="mydiv draggables" style="top: 223; left: 487;">
-        <div class="mydivheader">Click here to move</div>
-        <p>Move</p>
-        <p>this</p>
-        <p>DIV</p>
-    </div>
+        <div class="mydiv draggables" style="top: 23; left: 587;">
+            <div class="mydivheader">Click here to move</div>
+            <div class="content">
+                <p>Move</p>
+                <p>this</p>
+                <p>DIV</p>
+            </div>
+        </div>
 
-    <div class="mydiv draggables" style="top: 623; left: 287;">
-        <div class="mydivheader">Click here to move</div>
-        <p>Move</p>
-        <p>this</p>
-        <p>DIV</p>
+        <div class="mydiv draggables" style="top: 223; left: 487;">
+            <div class="mydivheader">Click here to move</div>
+            <div class="content">
+                <p>Move</p>
+                <p>this</p>
+                <p>DIV</p>
+            </div>
+        </div>
+
+        <div class="mydiv draggables" style="top: 623; left: 287;">
+            <div class="mydivheader">Click here to move</div>
+            <div class="content">
+                <p>Move</p>
+                <p>this</p>
+                <p>DIV</p>
+            </div>
+        </div>
+
     </div>
 
 </body>
@@ -109,8 +119,16 @@ display_data($data);
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, moved = false;
         elmnt.childNodes[1].onmousedown = dragMouseDown;
+        elmnt.onmousedown = function () {
+            let tempelm = elmnt;
+            elmnt.remove();
+            document.getElementsByClassName("page")[0].appendChild(tempelm);
+        }
 
         function dragMouseDown(e) {
+            let tempelm = elmnt;
+            elmnt.remove();
+            document.getElementsByClassName("page")[0].appendChild(tempelm);
             e = e || window.event;
             e.preventDefault();
             // get the mouse cursor position at startup:
@@ -164,6 +182,11 @@ display_data($data);
 
             if (!moved) {
                 console.log("click")
+                if (elmnt.childNodes[3].hidden) {
+                    elmnt.childNodes[3].hidden = false;
+                } else {
+                    elmnt.childNodes[3].hidden = true;
+                }
             }
             moved = false;
         }
