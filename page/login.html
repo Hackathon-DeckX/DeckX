@@ -29,13 +29,13 @@
             <div>
                 <div class="contentForm">
                     <div>
-                        <img class="profil" src="../public/vite.svg" alt=""></div>
+                        <img class="profil" src="../style/assets/pp.jpg" alt=""></div>
                     <div class="inputForm">
                         <h4>Admin</h4>
                         <div class="inputLabel">
                             <label for="inputLogin">Mot de passe</label>
                             <div>
-                                <input id="inputLogin" type="text" class="inputLogin">
+                                <input id="inputLogin" type="password" class="inputLogin">
                                 <p>Fr</p>
                                 <img class="btnArrow btn" src="../style/assets/arrow-right-solid.svg" alt="">
                                 <img class="btnQuestion btn" onclick="Modal()" src="../style/assets/question-solid.svg" alt="">
@@ -51,7 +51,7 @@
 
     <div class="footer">
         <div class="contentFooter">
-            <img class="btnPoweroff btn" onclick="Exit()" src="../style/assets/power-off-solid.svg" alt="">
+            <img class="btnPoweroff btn" onclick="btnOff()" src="../style/assets/power-off-solid.svg" alt="">
             <p>Arreter l'ordinateur</p>
         </div>
 
@@ -64,8 +64,16 @@
 
     <div class="modal">
         <img class="btnExit btn" onclick="Modal()" src="../style/assets/exit.svg" alt="">
-        <h1>Regles</h1>
+        <h2>Regles</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem commodi doloremque ea enim error inventore natus pariatur praesentium, quia recusandae rerum tempora veniam vero voluptatum. A aliquam consequuntur molestiae.</p>
+    </div>
+
+    <div class="confirm">
+        <h2>Etes-vous sur de vouloir quitter ?</h2>
+        <div>
+            <button class="btnConfirm" onclick="Return()">Non</button>
+            <button class="btnConfirm" onclick="Exit()">Oui</button>
+        </div>
     </div>
 
 <script src="../js/login.js"></script>
