@@ -2,11 +2,11 @@
 let documents = document.getElementsByClassName("documents")[0];
 let desktop = document.getElementsByClassName("desktop")[0];
 
+let appcons = Array.from(document.getElementsByClassName("docs"));
 let draggagles = Array.from(document.getElementsByClassName("draggables"));
 
 draggagles.forEach(element => {
-    dragElement(element)
-    console.log(element.childNodes[1])
+    dragElement(element);
 });
 
 function dragElement(elmnt) {
@@ -41,7 +41,6 @@ function dragElement(elmnt) {
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        console.log(elmnt.offsetTop, elmnt.offsetLeft, pos2)
         if (elmnt.offsetTop >= 0 && elmnt.offsetTop <= window.innerHeight - elmnt.clientHeight - 50) {
             elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
         } else {
@@ -58,9 +57,9 @@ function dragElement(elmnt) {
             elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
         } else {
             if (pos1 > 0) {
-                elmnt.style.left = (elmnt.offsetLeft + pos1 + 3) + "px";
+                elmnt.style.left = (elmnt.offsetLeft + (pos1 * 3)) + "px";
             } else if (pos1 < 0) {
-                elmnt.style.left = (elmnt.offsetLeft + pos1 - 3) + "px";
+                elmnt.style.left = (elmnt.offsetLeft + (pos1 * 3)) + "px";
             }
 
         }
@@ -73,14 +72,14 @@ function dragElement(elmnt) {
         document.onmouseup = null;
         document.onmousemove = null;
         if (!moved && e.target.type != "submit") {
-            console.log("click")
             if (elmnt.childNodes[3].style.display == "none") {
                 elmnt.childNodes[3].style.display = "block";
             } else {
                 elmnt.childNodes[3].style.display = "none";
             }
-        }else if(!moved && e.target.type == "submit"){
+        } else if (!moved && e.target.type == "submit") {
             elmnt.remove();
+            draggagles.splice(draggagles.indexOf(elmnt), 1);
         }
         moved = false;
     }
@@ -102,33 +101,69 @@ class Wind {
                 <p>${this.title}</p>
             </div>`;
 
-        let doc = document.getElementById(this.id);
-        doc.addEventListener("click", () => {
-            this.open();
-        });
     }
 
     open() {
-        let tempwind =
-            `<div id="wind${this.id}" class="mydiv draggables" style="top: 261px; left: 784px;">
-            <div class="mydivheader">${this.path}<button id="close${this.id}">❌</button></div>
-            <div class="content">
-                <p>${this.content}</p>
-            </div>
-        </div>`
+        if (!document.getElementById(`wind${this.id}`)) {
+            let tempwind =
+                `<div id="wind${this.id}" class="mydiv draggables" style="top: ${event.clientY}px; left: ${event.clientX}px;">
+                    <div class="mydivheader">${this.path}<button id="close${this.id}">❌</button></div>
+                    <div class="content">
+                        <p>${this.content}</p>
+                    </div>
+                </div>`
 
-        desktop.innerHTML += tempwind;
-        console.log(document.getElementById(`wind${this.id}`))
+            desktop.innerHTML += tempwind;
 
-        dragElement(document.getElementById(`wind${this.id}`));
+            refresh();
+        }
     }
 }
 
-windows = [new Wind("User", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg", "utilisateur: admin \n mot de passe: admin", "1"),];
+function refresh() {
+
+    windows.forEach(element => {
+        let doc = document.getElementById(element.id);
+        doc.addEventListener("click", () => {
+            element.open();
+        });
+    });
+
+    draggagles = Array.from(document.getElementsByClassName("draggables"));
+
+    draggagles.forEach(element => {
+        dragElement(element);
+    });
+}
+
+windows = [new Wind("User1", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "1"),
+new Wind("User2", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 2", "utilisateur: admin \n mot de passe: admin", "2"),
+new Wind("User3", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "3"),
+new Wind("User4", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "4"),
+new Wind("User5", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "5"),
+new Wind("User6", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "6"),
+new Wind("User7", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "7"),
+new Wind("User8", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "8"),
+new Wind("User9", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "9"),];
 
 windows.forEach(element => {
     element.addtopage();
 });
+
+refresh();
+
+for (var i = documents.children.length; i >= 0; i--) {
+    documents.appendChild(documents.children[Math.random() * i | 0])
+}
+
+let rowpx = window.innerWidth - (30 + 100)
+let row = Math.round(rowpx / 140);
+
+let colpx = window.innerHeight - (30 + 100)
+let col = Math.round(colpx / 140);
+console.log(row, col);
+
+
 
 
 
