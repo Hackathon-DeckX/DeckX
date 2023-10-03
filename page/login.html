@@ -32,14 +32,13 @@
                         <img class="profil" src="../public/vite.svg" alt=""></div>
                     <div class="inputForm">
                         <h4>Admin</h4>
-
                         <div class="inputLabel">
                             <label for="inputLogin">Mot de passe</label>
                             <div>
                                 <input id="inputLogin" type="text" class="inputLogin">
                                 <p>Fr</p>
                                 <img class="btnArrow btn" src="../style/assets/arrow-right-solid.svg" alt="">
-                                <img class="btnQuestion btn" src="../style/assets/question-solid.svg" alt="">
+                                <img class="btnQuestion btn" onclick="Modal()" src="../style/assets/question-solid.svg" alt="">
 
                             </div>
                         </div>
@@ -52,7 +51,7 @@
 
     <div class="footer">
         <div class="contentFooter">
-            <img class="btnPoweroff btn" src="../style/assets/power-off-solid.svg" alt="">
+            <img class="btnPoweroff btn" onclick="Exit()" src="../style/assets/power-off-solid.svg" alt="">
             <p>Arreter l'ordinateur</p>
         </div>
 
@@ -60,8 +59,17 @@
             <p>Apres avoir ouvert votre session, vous pouvez ajouter <br> ou modifier des comptes.</p>
             <p>Allez dans le Panneau de configuration et cliquez sur <br> Comptes d'utilisateurs.</p>
         </div>
-
     </div>
+
+
+    <div class="modal">
+        <img class="btnExit btn" onclick="Modal()" src="../style/assets/exit.svg" alt="">
+        <h1>Regles</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem commodi doloremque ea enim error inventore natus pariatur praesentium, quia recusandae rerum tempora veniam vero voluptatum. A aliquam consequuntur molestiae.</p>
+    </div>
+
+<script src="../js/login.js"></script>
+
 
 </body>
 </html>
