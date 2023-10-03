@@ -20,5 +20,10 @@ const Return = function () {
 }
 
 
+const Connect = function () {
+    const inputLogin = document.querySelector('.inputLogin').value
+    window.location.href = `http://localhost:5173/page/verif.php?=Password=${inputLogin}`
+}
+
 
 
