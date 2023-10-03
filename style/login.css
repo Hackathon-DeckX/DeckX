@@ -12,7 +12,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-
 body {
   height: 100vh;
   display: flex;
@@ -46,7 +45,6 @@ input:focus {
   padding: 10px;
   border-top: 1px solid #E26A2A;
 }
-
 
 .content {
   display: flex;
@@ -90,7 +88,6 @@ input:focus {
   max-width: 700px;
 }
 
-
 .contentForm {
   display: flex;
   align-items: center;
@@ -127,14 +124,12 @@ input:focus {
   transform: translateY(15px);
 }
 
-
 .inputLogin {
   padding: 5px;
   border-radius: 5px;
   height: 30px;
   width: 180px;
 }
-
 
 .inputLabel div {
   display: flex;
@@ -177,7 +172,6 @@ input:focus {
   display: flex;
   align-items: center;
 }
-
 
 .modal {
   background: white;
