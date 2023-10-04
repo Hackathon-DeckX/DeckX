@@ -14,14 +14,7 @@
 <body>
     <div class="desktop">
         <div class="documents">
-            
-        </div>
 
-        <div id="wind0" class="mydiv draggables" style="top: 261px; left: 784px;">
-            <div class="mydivheader">.../page/accueil.html <button class="closebut" id="close">❌</button></div>
-            <div class="content">
-                <p>qqjsdoqygscgdfytqufdr-qèstudfktiqrsèyudguqyrèsudgfkqrs-_èdiugfqsdrèdtuqfksdirdè-_lfkyur</p>
-            </div>
         </div>
 
     </div>
