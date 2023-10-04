@@ -131,11 +131,6 @@ input:focus {
     width: 180px;
 }
 
-/*.inputLabel div {*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*}*/
-
 .form {
     display: flex;
     align-items: center;
@@ -228,10 +223,37 @@ input:focus {
     border-radius: 3px;
     cursor: pointer;
     color: black;
-
 }
 
 .confirm--active {
+    display: block;
+}
+
+.btnIndice1 {
+    background: #1F5FE5;
+    display: none;
+}
+
+.btnIndice1--active {
+    display: block;
+}
+
+.indice1{
+    background: white;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid black;
+}
+
+.indice1 p, h2 {
+    color: black;
+}
+
+.indice1--active {
     display: block;
 }
 
