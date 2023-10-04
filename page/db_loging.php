@@ -66,9 +66,13 @@ function display_data($data)
     echo $output;
 }
 
-if (isset($_GET["db_user"]) && isset($_GET["db_passwd"]) && $_GET["db_user"] != "" && $_GET["db_passwd"] != "") {
-    
+if (
+    isset($_GET["db_user"]) && isset($_GET["db_passwd"]) &&
+    $_GET["db_user"] == "istrateuradmin" && $_GET["db_passwd"] == "teuradministra"
+) {
     display_data($data);
+} else {
+    header("Location: ../page/accueil.php");
 }
 
 

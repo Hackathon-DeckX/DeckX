@@ -153,9 +153,9 @@ new Wind("User7", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utili
 new Wind("User8", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "8"),
 new Wind("User9", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="db_loging.php">
 <label for="db_user9">DB User :</label>
-<input type="text" id="db_user9" name="db_user" value="test"><br><br>
+<input type="text" id="db_user9" name="db_user" value=""><br><br>
 <label for="db_passwd9">DB Passwd :</label>
-<input type="text" id="db_passwd9" name="db_passwd" value="test2"><br><br>
+<input type="text" id="db_passwd9" name="db_passwd" value=""><br><br>
 <input id="db_submit9" type="submit" value="Open DB">
 </form>`, "9"),];
 
@@ -182,7 +182,7 @@ console.log(row, col);
 //     console.log("test");
 // });
 
-let db = "DB login: admin/admin"
+let db = "DB login: istrateuradmin/teuradministra"
 
 // console.log(db)
 
