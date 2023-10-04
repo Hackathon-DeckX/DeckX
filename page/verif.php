@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 // propriété pour l'ouverture de la db
 class Database
@@ -45,11 +46,13 @@ $sql = "SELECT * FROM DeckX WHERE name = '$name' AND passwd = '$passwd'";
 $result = $conn->query($sql);
 
 if ($result->rowCount() == 1) {
+
+    $_SESSION['user_id'] = $name;
     
-    header('Location: http://localhost:8000/page/accueil.php');
+    header('Location: ../page/accueil.php');
     exit();
 } else {
-    
-    echo "Nom d'utilisateur ou mot de passe incorrect.";
+    header('Location: ../page/login.php');
+    exit();
 }
 ?>

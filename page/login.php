@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION)) {
+    unset($_SESSION);
+    session_destroy();
+    session_unset();
+}
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -5,7 +16,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/login2.css">
     <link rel="shortcut icon" href="../style/assets/logo.png" type="image/x-icon">
     <title>Login</title>
 </head>
@@ -34,17 +45,16 @@
                         <h4>Admin</h4>
                         <div class="inputLabel">
                             <label for="inputLogin">Mot de passe</label>
-                            <div>
-                            <form action="verif.php" method="post">
+                            <form action="verif.php" method="post" class="form">
                                     <input id="inputLogin" name="passwd" type="password" class="inputLogin">
                                 <p>Fr</p>
-                                <input type="submit" value="Se connecter">
+<!--                                <input type="submit" value="Se connecter">-->
+                                <button class="btnArrow btn"><img src="../style/assets/arrow-right-solid.svg" alt=""></button>
+                                <img class="btnQuestion btn" onclick="Modal()" src="../style/assets/question-solid.svg" alt="">
+
                             </form>
                                 <!-- <img class="btnArrow btn"  onclick="Connect()" src="../style/assets/arrow-right-solid.svg" alt=""> -->
-                                <img class="btnQuestion btn" onclick="Modal()" src="../style/assets/question-solid.svg" alt="">
-                            
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -66,7 +76,7 @@
 
 
     <div class="modal">
-        <img class="btnExit btn" onclick="Modal()" src="../style/assets/exit.svg" alt="">
+        <img class="btnExit btn" onclick="Exit()" src="../style/assets/exit.svg" alt="">
         <h2>Regles</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem commodi doloremque ea enim error inventore natus pariatur praesentium, quia recusandae rerum tempora veniam vero voluptatum. A aliquam consequuntur molestiae.</p>
     </div>
@@ -75,7 +85,7 @@
         <h2>Etes-vous sur de vouloir quitter ?</h2>
         <div>
             <button class="btnConfirm" onclick="Return()">Non</button>
-            <button class="btnConfirm" onclick="Exit()">Oui</button>
+            <button class="btnConfirm" onclick="ouvrirFenetre()">Oui</button>
         </div>
     </div>
 
