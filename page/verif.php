@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 // propriété pour l'ouverture de la db
 class Database
@@ -45,6 +46,8 @@ $sql = "SELECT * FROM DeckX WHERE name = '$name' AND passwd = '$passwd'";
 $result = $conn->query($sql);
 
 if ($result->rowCount() == 1) {
+
+    $_SESSION['user_id'] = $name;
     
     header('Location: ../page/accueil.php');
     exit();
