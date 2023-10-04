@@ -35,11 +35,14 @@
                         <div class="inputLabel">
                             <label for="inputLogin">Mot de passe</label>
                             <div>
-                                <input id="inputLogin" type="password" class="inputLogin">
+                            <form action="verif.php" method="post">
+                                    <input id="inputLogin" name="passwd" type="password" class="inputLogin">
                                 <p>Fr</p>
-                                <img class="btnArrow btn"  onclick="Connect()" src="../style/assets/arrow-right-solid.svg" alt="">
+                                <input type="submit" value="Se connecter">
+                            </form>
+                                <!-- <img class="btnArrow btn"  onclick="Connect()" src="../style/assets/arrow-right-solid.svg" alt=""> -->
                                 <img class="btnQuestion btn" onclick="Modal()" src="../style/assets/question-solid.svg" alt="">
-
+                            
                             </div>
                         </div>
                     </div>
