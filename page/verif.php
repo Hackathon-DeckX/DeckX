@@ -46,7 +46,7 @@ $result = $conn->query($sql);
 
 if ($result->rowCount() == 1) {
     
-    header('Location: http://localhost:8000/page/accueil.php');
+    header('Location: ../page/accueil.php');
     exit();
 } else {
     
