@@ -12,10 +12,17 @@ draggagles.forEach(element => {
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, moved = false;
     elmnt.childNodes[1].onmousedown = dragMouseDown;
-    elmnt.onmousedown = function () {
-        let tempelm = elmnt;
-        elmnt.remove();
-        document.getElementsByClassName("desktop")[0].appendChild(tempelm);
+    elmnt.onmousedown = function (e) {
+        console.log(e.target.id, elmnt);
+        if (e.target.id == "db_submit" + elmnt.id.replace(/\D/g, '')) {
+            console.log("submit")
+            console.log(document.getElementById("db_user" + elmnt.id.replace(/\D/g, '')).value, document.getElementById("db_passwd" + elmnt.id.replace(/\D/g, '')).value);
+        } else {
+            let tempelm = elmnt;
+            elmnt.remove();
+            document.getElementsByClassName("desktop")[0].appendChild(tempelm);
+        }
+
     }
 
     function dragMouseDown(e) {
@@ -109,7 +116,7 @@ class Wind {
                 `<div id="wind${this.id}" class="mydiv draggables" style="top: ${event.clientY}px; left: ${event.clientX}px;">
                     <div class="mydivheader">${this.path}<button id="close${this.id}">❌</button></div>
                     <div class="content">
-                        <p>${this.content}</p>
+                        ${this.content}
                     </div>
                 </div>`
 
@@ -144,7 +151,13 @@ new Wind("User5", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utili
 new Wind("User6", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "6"),
 new Wind("User7", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "7"),
 new Wind("User8", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "8"),
-new Wind("User9", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "9"),];
+new Wind("User9", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="db_loging.php">
+<label for="db_user9">DB User :</label>
+<input type="text" id="db_user9" name="db_user" value="test"><br><br>
+<label for="db_passwd9">DB Passwd :</label>
+<input type="text" id="db_passwd9" name="db_passwd" value="test2"><br><br>
+<input id="db_submit9" type="submit" value="Open DB">
+</form>`, "9"),];
 
 windows.forEach(element => {
     element.addtopage();
@@ -164,10 +177,14 @@ let col = Math.round(colpx / 140);
 console.log(row, col);
 
 
+// document.getElementById("DB_form").addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     console.log("test");
+// });
 
+let db = "DB login: admin/admin"
 
-
-
+// console.log(db)
 
 
 
