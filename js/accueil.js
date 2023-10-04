@@ -1,6 +1,7 @@
 
-let documents = document.getElementsByClassName("documents")[0];
-let desktop = document.getElementsByClassName("desktop")[0];
+const documents = document.getElementsByClassName("documents")[0];
+const desktop = document.getElementsByClassName("desktop")[0];
+const style_mod = document.getElementById("style_mod");
 
 let appcons = Array.from(document.getElementsByClassName("docs"));
 let draggagles = Array.from(document.getElementsByClassName("draggables"));
@@ -13,11 +14,7 @@ function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, moved = false;
     elmnt.childNodes[1].onmousedown = dragMouseDown;
     elmnt.onmousedown = function (e) {
-        console.log(e.target.id, elmnt);
-        if (e.target.id == "db_submit" + elmnt.id.replace(/\D/g, '')) {
-            console.log("submit")
-            console.log(document.getElementById("db_user" + elmnt.id.replace(/\D/g, '')).value, document.getElementById("db_passwd" + elmnt.id.replace(/\D/g, '')).value);
-        } else {
+        if (e.target.id != "db_submit" + elmnt.id.replace(/\D/g, '')) {
             let tempelm = elmnt;
             elmnt.remove();
             document.getElementsByClassName("desktop")[0].appendChild(tempelm);
@@ -143,7 +140,7 @@ function refresh() {
     });
 }
 
-windows = [new Wind("User1", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "1"),
+let windows = [new Wind("User1", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "1"),
 new Wind("User2", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 2", "utilisateur: admin \n mot de passe: admin", "2"),
 new Wind("User3", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "3"),
 new Wind("User4", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "4"),
@@ -169,25 +166,34 @@ for (var i = documents.children.length; i >= 0; i--) {
     documents.appendChild(documents.children[Math.random() * i | 0])
 }
 
-let rowpx = window.innerWidth - (30 + 100)
-let row = Math.round(rowpx / 140);
-
-let colpx = window.innerHeight - (30 + 100)
-let col = Math.round(colpx / 140);
-console.log(row, col);
-
-
-// document.getElementById("DB_form").addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     console.log("test");
-// });
-
 let db = "DB login: istrateuradmin/teuradministra"
 
 // console.log(db)
 
+appcons = Array.from(document.getElementsByClassName("docs"));
 
+let casenotfree = [];
 
+function setwindpos() {
+    style_mod.innerHTML = "";
+    appcons.forEach(element => {
+        let rancol;
+        let ranrow;
+        do {
+            let row = Math.round((window.innerWidth - (30 + 100)) / 140);
+            ranrow = Math.round(Math.random() * row);
+            let col = Math.round((window.innerHeight - (30 + 100)) / 140);
+            rancol = Math.round(Math.random() * col);
+        } while (casenotfree.filter(vendor => vendor['ranrow'] === ranrow).filter(vendor => vendor['rancol'] === rancol).length > 0)
+        style_mod.innerHTML += `
+        .documents div:nth-child(${element.id}) {
+            grid-column: ${ranrow} / span 1;
+            grid-row: ${rancol} / span 1;
+        }`
+        casenotfree.push({ ranrow, rancol })
+    });
 
+}
 
+setwindpos();
 

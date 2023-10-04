@@ -21,8 +21,17 @@
 </body>
 
 <footer>
-    <div class="footer_container"></div>
+    <div class="footer_container">
+        <div class="startbut">
+            <img src="/style/assets/logo.png">
+            <p>Start</p>
+        </div>
+    </div>
 </footer>
-<script src="../js/accueil.js"></script>
+<script type="module" src="../js/accueil.js"></script>
 
 </html>
+
+<style id="style_mod">
+
+</style>
