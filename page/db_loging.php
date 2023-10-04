@@ -75,14 +75,6 @@ if (
     header("Location: ../page/accueil.php");
 }
 
-
-
-
-$user = $_GET["db_user"];
-$passwd = $_GET["db_passwd"];
-
-echo ($user . "    " . $passwd);
-
 ?>
 
 <!DOCTYPE html>
@@ -106,6 +98,9 @@ echo ($user . "    " . $passwd);
         padding: 0;
         max-height: 100vh;
         max-width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     table,
