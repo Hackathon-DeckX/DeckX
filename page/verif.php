@@ -52,7 +52,7 @@ if ($result->rowCount() == 1) {
     header('Location: ../page/accueil.php');
     exit();
 } else {
-    
-    echo "Nom d'utilisateur ou mot de passe incorrect.";
+    header('Location: ../page/login.php');
+    exit();
 }
 ?>
