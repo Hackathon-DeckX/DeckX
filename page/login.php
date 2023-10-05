@@ -78,7 +78,7 @@ if(isset($_SESSION)) {
     <div class="indice1">
         <img class="btnExit btn" onclick="Indice1()" src="../style/assets/exit.svg" alt="">
         <h2>Indice 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem commodi doloremque ea enim error inventore natus pariatur praesentium, quia recusandae rerum tempora veniam vero voluptatum. A aliquam consequuntur molestiae.</p>
+        <p>Faille SQL</p>
     </div>
 
 
