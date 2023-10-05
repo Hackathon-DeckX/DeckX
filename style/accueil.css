@@ -33,7 +33,7 @@ img {
     cursor: pointer;
     z-index: 7;
     padding: 0;
-    width: 100px;
+    width: 75px;
 }
 
 .docs {
@@ -74,14 +74,13 @@ img {
     border:none;
     transform:skewX(-3deg);
     left:-5px;
-    
     box-shadow: 0px 5px 10px #8ae282 inset;
     background: radial-gradient(circle, #5eac56 0%, #3c873c 100%) center/cover no-repeat;
   }
 
 .footer_container img{
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     margin-right: 5px;
 }
 
@@ -105,6 +104,7 @@ img {
 
 p {
     margin: 0;
+
 }
 
 .content {

@@ -16,7 +16,7 @@ if(isset($_SESSION)) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../style/login3.css">
+    <link rel="stylesheet" href="../style/login4.css">
     <link rel="shortcut icon" href="../style/assets/logo.png" type="image/x-icon">
     <title>Login</title>
 </head>
@@ -78,7 +78,7 @@ if(isset($_SESSION)) {
     <div class="indice1">
         <img class="btnExit btn" onclick="Indice1()" src="../style/assets/exit.svg" alt="">
         <h2>Indice 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem commodi doloremque ea enim error inventore natus pariatur praesentium, quia recusandae rerum tempora veniam vero voluptatum. A aliquam consequuntur molestiae.</p>
+        <p>Faille SQL</p>
     </div>
 
 
@@ -96,7 +96,7 @@ if(isset($_SESSION)) {
         </div>
     </div>
 
-<script src="../js/login.js"></script>
+<script src="../js/login2.js"></script>
 
 
 </body>

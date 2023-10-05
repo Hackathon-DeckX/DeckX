@@ -140,15 +140,18 @@ function refresh() {
     });
 }
 
-let windows = [new Wind("User1", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "1"),
-new Wind("User2", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 2", "utilisateur: admin \n mot de passe: admin", "2"),
-new Wind("User3", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "3"),
-new Wind("User4", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "4"),
-new Wind("User5", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "5"),
-new Wind("User6", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "6"),
-new Wind("User7", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "7"),
-new Wind("User8", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 1", "utilisateur: admin \n mot de passe: admin", "8"),
-new Wind("User9", "/mateo/src/img/user.svg", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="db_loging.php">
+let windows = [new Wind("Projets pro", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Projets pro","\n fichier.txt <br> index.html", "1"),
+new Wind("Travail", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Travail", "Accident_de_trvail.pdf <br> code_pour_sonar.js <br> presentation.pdf", "2"),
+new Wind("Réunion", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Réunion", "Reunion_du_07/07/07.txt <br> Reunion_du_12/12/12.txt <br> Reunion_du_25/09/18.txt <br> Reunion_du_16/01/23.txt", "3"),
+new Wind("Comptes rendus", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Comptes Rendus", "Compte_Rendu_du_16/05/14.odt <br> Compte_Rendu_du_03/02/20.odt <br> Compte_Rendu_du_19/05/23.odt <br> Compte_Rendu_du_05/06/23.odt", "4"),
+new Wind("Commercial", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Commercial", "Echange_usa.zip <br> Echange_italie.zip <br> Commande_pour_japon.zip", "5"),
+new Wind("Pause Dej", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Pause Dej", "Repas_Foxtrot <br> Repas_Lima <br> Repas_Alpha <br> Repas_Golf", "6"),
+new Wind("Document", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Document", "fichier.txt <br> presentation.pdf <br> Compte_Rendu_du_16/05/14.odt", "7"),
+new Wind("Docker", "../style/assets/Docker.png", "C:/Users/User/Desktop/Docker", "Docker.exe <br> Docker_CLI.exe <br> Docker_Daemon.exe", "8"),
+new Wind("flag", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/flag", "Fichier Corrompu"),
+
+
+new Wind("Database", "../style/assets/icon_database.png", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="db_loging.php">
 <label for="db_user9">DB User :</label>
 <input type="text" id="db_user9" name="db_user" value=""><br><br>
 <label for="db_passwd9">DB Passwd :</label>
