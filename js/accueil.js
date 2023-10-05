@@ -147,8 +147,8 @@ new Wind("Comptes rendus", "../style/assets/icon_folder.png", "C:/Users/User/Des
 new Wind("Commercial", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Commercial", "Echange_usa.zip <br> Echange_italie.zip <br> Commande_pour_japon.zip", "5"),
 new Wind("Pause Dej", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Pause Dej", "Repas_Foxtrot <br> Repas_Lima <br> Repas_Alpha <br> Repas_Golf", "6"),
 new Wind("Document", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/Document", "fichier.txt <br> presentation.pdf <br> Compte_Rendu_du_16/05/14.odt", "7"),
-new Wind("Docker", "../style/assets/Docker.png", "C:/Users/User/Desktop/Docker", "Docker.exe <br> Docker_CLI.exe <br> Docker_Daemon.exe", "8"),
-new Wind("flag", "../style/assets/icon_folder.png", "C:/Users/User/Desktop/flag", "Fichier Corrompu"),
+new Wind("Docker", "../style/assets/Docker.png", "./Dockerfile", "Docker.exe <br> Docker_CLI.exe <br> Docker_Daemon.exe", "8"),
+new Wind("flag", "../style/assets/flag.png", "./mainStorage/project/NdijHVS.vhj", "Alert Fichier Corrompu <br> Veuillez vérifier le fichier dans le stokage serveur", "10"),
 
 
 new Wind("Database", "../style/assets/icon_database.png", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="db_loging.php">
