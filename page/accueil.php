@@ -28,16 +28,30 @@ if (!isset($_SESSION['user_id'])) {
         </div>
 
     </div>
+
 </body>
 
 <footer>
     <div class="footer_container">
         <div class="startbut">
-            <img src="../style/assets/logo.png">
+            <img src="../style/assets/logo.png" alt="">
             <p>Start</p>
+
+            <img class="btnIndice2 btn" onclick="Indicee()" src="../style/assets/info-solid.svg" alt="">
+
         </div>
+
     </div>
 </footer>
+
+
+<div class="indice2">
+    <img class="btnExit btn" onclick="Indicee()" src="../style/assets/exit.svg" alt="">
+    <h2>Indice 2</h2>
+    <p>Faille SQL</p>
+</div>
+
+
 <script type="module" src="../js/accueil.js"></script>
 
 </html>

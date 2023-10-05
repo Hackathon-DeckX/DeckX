@@ -55,7 +55,7 @@ if ($result->rowCount() == 1) {
 
     $_SESSION['user_id'] = $name;
 
-    header('Location: ../page/accueil.php');
+    header('Location: ../page/solution.php');
     exit();
 } else {
     header('Location: ../page/login.php');

@@ -200,3 +200,18 @@ function setwindpos() {
 
 setwindpos();
 
+
+const timeout2 = function () {
+    const btnIndice2 = document.querySelector('.btnIndice2')
+    btnIndice2.classList.toggle('btnIndice2--active')
+}
+
+setTimeout(() => {
+    timeout2()
+}, 1000)
+
+const Indicee = function () {
+    const indice2 = document.querySelector('.indice2')
+    indice2.classList.toggle('indice2--active')
+}
+

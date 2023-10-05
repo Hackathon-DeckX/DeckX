@@ -1,13 +1,13 @@
 let maFenetre;
 
 
-const timeeout = function () {
+const timeout = function () {
     const btnIndice1 = document.querySelector('.btnIndice1')
     btnIndice1.classList.toggle('btnIndice1--active')
 }
 
 setTimeout(() => {
-    timeeout()
+    timeout()
 }, 200000)
 
 const Modal = function () {

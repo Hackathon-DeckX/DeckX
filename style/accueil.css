@@ -118,3 +118,43 @@ p {
 .closebut {
     z-index: 11;
 }
+
+
+.btn {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid white;
+
+    cursor: pointer;
+}
+
+.btnIndice2 {
+    background: #1F5FE5;
+    display: none;
+}
+
+.btnIndice2--active {
+    display: block;
+}
+
+.indice2{
+    background: white;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid black;
+}
+
+.indice2 p, h2 {
+    color: black;
+}
+
+.indice2--active {
+    display: block;
+}
