@@ -16,7 +16,7 @@ if(isset($_SESSION)) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../style/login3.css">
+    <link rel="stylesheet" href="../style/login4.css">
     <link rel="shortcut icon" href="../style/assets/logo.png" type="image/x-icon">
     <title>Login</title>
 </head>
@@ -96,7 +96,7 @@ if(isset($_SESSION)) {
         </div>
     </div>
 
-<script src="../js/login.js"></script>
+<script src="../js/login2.js"></script>
 
 
 </body>
