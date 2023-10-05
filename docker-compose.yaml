@@ -1,0 +1,22 @@
+version: "3.8" # specify docker-compose version
+services:
+  www:
+    image: php:apache
+    volumes:
+      - "./:/var/www/html" # mount source code into container
+    ports:
+      - "80:80"
+      - "443:443" # for future ssl traffic
+    restart: always
+    networks:
+      deckx:
+        ipv4_address: 192.168.92.21
+networks:
+  deckx:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.92.0/24"
+  
+
+
