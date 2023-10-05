@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id'])) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/accueil.css">
+    <link rel="stylesheet" href="../style/accueil2.css">
     <link rel="shortcut icon"
         href="../style/assets/logo.png"
         type="image/x-icon">
@@ -29,28 +29,44 @@ if (!isset($_SESSION['user_id'])) {
 
     </div>
 
+    <footer>
+        <div class="footer_container">
+            <div class="startbut">
+                <img src="../style/assets/logo.png" alt="">
+                <p>Start</p>
+
+                <img class="btnIndice2 btn" id="indice2" onclick="Indice2()" src="../style/assets/info-solid.svg" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div class="indice2">
+        <img class="btnExit btn" onclick="Indice2()" src="../style/assets/exit.svg" alt="">
+        <h2>Indice 2</h2>
+        <p>Chercher dans le code js</p>
+    </div>
+
 </body>
 
-<footer>
-    <div class="footer_container">
-        <div class="startbut">
-            <img src="../style/assets/logo.png" alt="">
-            <p>Start</p>
+<script>
+    const timeout2 = function () {
+        const btnIndice2 = document.querySelector('.btnIndice2')
+        btnIndice2.classList.toggle('btnIndice2--active')
+    }
 
-            <img class="btnIndice2 btn" onclick="Indicee()" src="../style/assets/info-solid.svg" alt="">
-
-        </div>
-
-    </div>
-</footer>
+    setTimeout(() => {
+        timeout2()
+    }, 200000)
 
 
-<div class="indice2">
-    <img class="btnExit btn" onclick="Indicee()" src="../style/assets/exit.svg" alt="">
-    <h2>Indice 2</h2>
-    <p>Faille SQL</p>
-</div>
-
+    function Indice2() {
+        const indice2 = document.querySelector(".indice2")
+        indice2.classList.toggle('indice2--active')
+        console.log('ok')
+    }
+</script>
 
 <script type="module" src="../js/accueil.js"></script>
 

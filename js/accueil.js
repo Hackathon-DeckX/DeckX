@@ -151,7 +151,7 @@ new Wind("Docker", "../style/assets/Docker.png", "./Dockerfile", "Docker.exe <br
 new Wind("flag", "../style/assets/flag.png", "./mainStorage/project/NdijHVS.vhj", "Alert Fichier Corrompu <br> Veuillez vérifier le fichier dans le stokage serveur", "10"),
 
 
-new Wind("Database", "../style/assets/icon_database.png", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="db_loging.php">
+new Wind("Database", "../style/assets/icon_database.png", "/mateo/src/img/user.svg 9", `<form id="DB_form" action="../page/solutionJs.php">
 <label for="db_user9">DB User :</label>
 <input type="text" id="db_user9" name="db_user" value=""><br><br>
 <label for="db_passwd9">DB Passwd :</label>
@@ -178,7 +178,7 @@ appcons = Array.from(document.getElementsByClassName("docs"));
 let casenotfree = [];
 
 function setwindpos() {
-    style_mod.innerHTML = "";
+    style_mod.innerText = "";
     appcons.forEach(element => {
         let rancol;
         let ranrow;
@@ -201,17 +201,4 @@ function setwindpos() {
 setwindpos();
 
 
-const timeout2 = function () {
-    const btnIndice2 = document.querySelector('.btnIndice2')
-    btnIndice2.classList.toggle('btnIndice2--active')
-}
-
-setTimeout(() => {
-    timeout2()
-}, 1000)
-
-const Indicee = function () {
-    const indice2 = document.querySelector('.indice2')
-    indice2.classList.toggle('indice2--active')
-}
 

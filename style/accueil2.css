@@ -53,7 +53,7 @@ img {
     justify-content: space-between;
     align-items: center;
     background-color: #2167f3;
-    
+
     box-shadow: 0px 5px 10px #5bd0ed inset;
 }
 
@@ -76,7 +76,7 @@ img {
     left:-5px;
     box-shadow: 0px 5px 10px #8ae282 inset;
     background: radial-gradient(circle, #5eac56 0%, #3c873c 100%) center/cover no-repeat;
-  }
+}
 
 .footer_container img{
     height: 30px;
@@ -136,6 +136,11 @@ p {
     display: none;
 }
 
+.btnExit {
+    background: red;
+    border: 1px solid black;
+}
+
 .btnIndice2--active {
     display: block;
 }
@@ -149,10 +154,12 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     border: 3px solid black;
+    z-index: 99;
 }
 
 .indice2 p, h2 {
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .indice2--active {

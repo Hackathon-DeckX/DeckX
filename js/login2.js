@@ -18,7 +18,7 @@ const Modal = function () {
 
 // Eteindre la page
 function ouvrirFenetre() {
-    maFenetre = window.open('', 'MaFenetre', 'width=100vh,height=100vh,toolbar=no,menubar=no,scrollbars=no,resizable=yes,left=500,top=500');
+    maFenetre = window.open('', 'MaFenetre', 'width=100,height=980,toolbar=no,menubar=no,scrollbars=no,resizable=yes');
     maFenetre.document.body.background = "black";
     //Image de fond
     maFenetre.document.body.style.backgroundImage = "url('../style/assets/ecrantExit.jpeg')";

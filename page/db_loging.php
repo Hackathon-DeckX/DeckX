@@ -89,8 +89,53 @@ if (
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../style/accueil2.css">
+
     <title>Home page</title>
 </head>
+
+<body>
+
+<img class="btnIndice2 btn" id="indice2" onclick="Indice2()" src="../style/assets/info-solid.svg" alt="">
+
+<img class="home btn" id="indice2" onclick="home()" src="../style/assets/home.svg" alt="">
+
+
+
+        <div class="indice2">
+            <img class="btnExit btn" onclick="Indice2()" src="../style/assets/exit.svg" alt="">
+            <h2>Indice 3</h2>
+            <p>Utiliser l'URL pour acceder au flag</p>
+        </div>
+
+
+
+
+        <script>
+            const timeout2 = function () {
+                const btnIndice2 = document.querySelector('.btnIndice2')
+                btnIndice2.classList.toggle('btnIndice2--active')
+            }
+
+            setTimeout(() => {
+                timeout2()
+            }, 1000)
+
+
+           const Indice2 = function () {
+                const indice2 = document.querySelector(".indice2")
+                indice2.classList.toggle('indice2--active')
+                console.log('ok')
+            }
+
+
+          const home = function () {
+                window.location.href = "../page/accueil.php";
+            }
+        </script>
+</body>
+
+</html>
 
 <style>
     body {
