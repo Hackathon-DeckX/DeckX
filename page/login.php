@@ -85,7 +85,7 @@ if(isset($_SESSION)) {
     <div class="modal">
         <img class="btnExit btn" onclick="Modal()" src="../style/assets/exit.svg" alt="">
         <h2>Regles</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem commodi doloremque ea enim error inventore natus pariatur praesentium, quia recusandae rerum tempora veniam vero voluptatum. A aliquam consequuntur molestiae.</p>
+        <p>Bonjour, votre but est simple accéder au FLAG en contournant toutes les sécurités. Vous pouvez utiliser l'inspecteur web et même dever l'utiliser.</p>
     </div>
 
     <div class="confirm">

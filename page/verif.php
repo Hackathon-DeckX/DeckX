@@ -34,9 +34,9 @@ class Database
 
 }
 
-// Vérification de la connexion
+// Vérification de la connexion (utiliser vos propres identifiants de base de données localhost)
 try {
-    $database = new Database("176.31.132.185", "3306", "kcdxbd_sqwadowe_db", "kcdxbd_sqwadowe_db", "_Bo%i0j4M!aY76U-");
+    $database = new Database("127.0.0.1", "3306", "DeckX", "root", "");
 
     $conn = $database->getConnection();
 } catch (PDOException $e) {

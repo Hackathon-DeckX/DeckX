@@ -23,8 +23,8 @@ class Database
     }
 }
 
-//ouverture de la base de données
-$database = new Database("176.31.132.185", "3306", "kcdxbd_sqwadowe_db", "kcdxbd_sqwadowe_db", "_Bo%i0j4M!aY76U-");
+//ouverture de la base de données (utiliser vos propres identifiants de base de données localhost)
+$database = new Database("127.0.0.1", "3306", "DeckX", "root", "");
 
 $conn = $database->getConnection();
 
